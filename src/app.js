@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+var cors = require("cors");
 const app = express();
 
 // Load dotenv module (ONLY IN DEVELOPMENT)
@@ -11,10 +12,12 @@ if (process.env.NODE_ENV != "production") {
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors());
 
 // API Routes
 app.use("/v1/location", require("./routes/location.route"));
 app.use("/v1/current", require("./routes/weather.route"));
+app.use("/v1/forecast", require("./routes/forecast.route"));
 
 // Error handling
 app.use((req, res, next) => {
