@@ -13,11 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // API Routes
-app.use("/hello", (req, res, next) => {
-  res.status(200).json({
-    message: "Hello world!",
-  });
-});
+app.use("/v1/location", require("./routes/location.route"));
 
 // Error handling
 app.use((req, res, next) => {
