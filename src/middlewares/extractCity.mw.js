@@ -1,4 +1,4 @@
-const locationClient = require("../config/locationClient");
+const locationClient = require("../services/locationClient");
 
 const extractCity = async (req, res, next) => {
   let { city } = req.params;
