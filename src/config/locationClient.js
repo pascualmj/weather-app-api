@@ -9,6 +9,10 @@ const locationClient = axios.create({
   },
 });
 
+const getLocation = () => {
+  return locationClient.get("/");
+};
+
 module.exports = {
-  locationClient,
+  getLocation,
 };
