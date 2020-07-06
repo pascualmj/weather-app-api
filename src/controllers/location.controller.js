@@ -1,8 +1,8 @@
-const { locationClient } = require("../config/httpClient");
+const locationClient = require("../config/locationClient");
 
 const getLocation = async (req, res, next) => {
   try {
-    const { data } = await locationClient.get("/");
+    const { data } = await locationClient.getLocation();
     res.status(200).json({ data });
   } catch (error) {
     next(error);
