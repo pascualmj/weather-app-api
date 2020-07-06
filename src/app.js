@@ -14,6 +14,7 @@ app.use(express.json());
 
 // API Routes
 app.use("/v1/location", require("./routes/location.route"));
+app.use("/v1/current", require("./routes/weather.route"));
 
 // Error handling
 app.use((req, res, next) => {
