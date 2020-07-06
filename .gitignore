@@ -5,5 +5,8 @@
 node_modules/
 .vscode/
 
+# Test generated files
+coverage/
+
 # Miscellaneous
 .DS_Store
