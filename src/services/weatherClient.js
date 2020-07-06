@@ -15,6 +15,13 @@ const getCurrentWeather = (city) => {
   );
 };
 
+const getWeatherForecast = ({ lat, lon }) => {
+  return weatherClient.get(
+    `/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=metric&appid=${process.env.OPEN_WEATHER_API_KEY}`
+  );
+};
+
 module.exports = {
   getCurrentWeather,
+  getWeatherForecast,
 };
