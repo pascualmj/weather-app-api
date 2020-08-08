@@ -6,7 +6,7 @@ node_modules/
 .vscode/
 
 # Test generated files
-coverage/
+.nyc_output/
 
 # Miscellaneous
 .DS_Store

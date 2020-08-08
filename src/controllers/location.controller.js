@@ -1,4 +1,4 @@
-const locationClient = require("../services/locationClient");
+const locationClient = require("../services/locationClient.js");
 
 const getLocation = async (req, res, next) => {
   try {
@@ -9,6 +9,4 @@ const getLocation = async (req, res, next) => {
   }
 };
 
-module.exports = {
-  getLocation,
-};
+module.exports = getLocation;
