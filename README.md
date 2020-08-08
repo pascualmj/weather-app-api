@@ -12,7 +12,7 @@ Se utilizaron los módulos [Husky](https://www.npmjs.com/package/husky) y [Lint 
 
 - `eslint --fix`
 - `prettier --write`
-- `jest src/*`
+- `mocha --recursive`
 
 Esto asegura que, antes de efectivizar el commit, el código se encuentra libre de errores, correctamente formateado y que todos los tests pasaron exitosamente.
 
@@ -20,10 +20,12 @@ Esto asegura que, antes de efectivizar el commit, el código se encuentra libre 
 
 Para la definición de los tests, se utilizaron los siguientes módulos:
 
-- [Supertest](https://github.com/visionmedia/supertest).
-- [Jest](https://jestjs.io/).
+- [Mocha](https://mochajs.org/).
+- [Chai](https://www.chaijs.com/).
+- [Proxyquire](https://www.npmjs.com/package/proxyquire).
+- [Sinon](https://sinonjs.org/).
 
-Se realizaron tests asíncronos para verificar el correcto funcionamiento de los endpoints.
+Se realizaron tests unitarios para verificar el comportamiento esperado de los endpoints.
 
 ## Scripts Disponibles
 
@@ -34,6 +36,10 @@ Corre la aplicación en modo desarrollo. El servidor escucha peticiones en el **
 ### `npm test`
 
 Ejecuta los tests definidos en el proyecto.
+
+### `npm run coverage`
+
+Muestra el resultado de la cobertura de los tests definidos.
 
 ### `npm run lint`
 
