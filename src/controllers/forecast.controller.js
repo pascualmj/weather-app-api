@@ -1,4 +1,4 @@
-const weatherClient = require("../services/weatherClient");
+const weatherClient = require("../services/weatherClient.js");
 
 const getForecast = async (req, res, next) => {
   try {
@@ -15,6 +15,4 @@ const getForecast = async (req, res, next) => {
   }
 };
 
-module.exports = {
-  getForecast,
-};
+module.exports = getForecast;
