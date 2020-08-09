@@ -16,6 +16,12 @@ Se utilizaron los módulos [Husky](https://www.npmjs.com/package/husky) y [Lint 
 
 Esto asegura que, antes de efectivizar el commit, el código se encuentra libre de errores, correctamente formateado y que todos los tests pasaron exitosamente.
 
+## Endpoints
+
+- /v1/location
+- /v1/current/:city?
+- /v1/forecast/:city?
+
 ## Pruebas
 
 Para la definición de los tests, se utilizaron los siguientes módulos:
